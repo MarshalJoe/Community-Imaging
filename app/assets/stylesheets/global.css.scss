@@ -15,7 +15,6 @@ $tertiary:#234e73;
 //media query sizes
 $large-size:1000px;
 $medium-size:720px;
-$small-size:320px;
 
 
 
@@ -99,6 +98,12 @@ body{
 	border-width:1px;	
 }
 
+.grey-border{
+	border-style:solid;
+	border-color:red;
+	border-width:1px;	
+}
+
 ///////////////////////////////////////////////////////////////
 //                                                           //
 //                                                           //
@@ -108,15 +113,23 @@ body{
 ///////////////////////////////////////////////////////////////
 
 
-ul {
+ul{
 
 	list-style-type:none;
 	margin:0;
 	padding:0;
 }
 
-a.nav {
+a{
+	display:block;
+	margin-right:25px;
 
+
+}
+
+li{
+	display:inline;
+	float:left;
 }
 
 
