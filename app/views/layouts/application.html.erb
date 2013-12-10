@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Community Imaging" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -16,7 +16,33 @@
 
       <div class="row content-background">
         
-      
+        <div class="row">
+
+          <div class="large-4 medium-4 small-8 small-offset-1 large-offset-1 medium-offset-1 columns">
+            <%= image_tag "CommImagingLogo.png" %>
+          </div>
+
+        </div>
+
+        <div class="row div-border">
+          <div class="large-11 large-offset-1">
+
+            <div>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Patients</a></li>
+                <li><a href="#">Referring Physicians</a></li>
+              </ul>
+            </div>
+
+          </div>
+          
+        </div>
+
+
       </div>
 
 

@@ -67,22 +67,57 @@ $small-size:320px;
 //                                                           //
 ///////////////////////////////////////////////////////////////
 
-.content-background{
-  
-	@include breakpoint(large-screen){
-		{
-			background-color:white;
-			min-height:600px;
-			width:400px;
-			@include single-box-shadow;
-		}
-}
-
 body{
 	background-color:$bgcolor; 
 }
 
+.content-background{
+	background-color:white;
+	@include single-box-shadow;
+	min-height:100px;
+	min-width:10px;
+	border-style:solid;
+	border-color:$bgcolor;
+	border-width:2px;	
 
+	@include breakpoint(med-screen){	
+		min-height:500px;
+		min-width:200px;
+		border-width:2px;
+	}
+	
+	@include breakpoint(large-screen){	
+		min-height:600px;
+		min-width:200px;	
+		border-width:0px;	
+	}
+}
+
+.div-border{
+	border-style:solid;
+	border-color:red;
+	border-width:1px;	
+}
+
+///////////////////////////////////////////////////////////////
+//                                                           //
+//                                                           //
+//                    Navigation                             //
+//                                                           //
+//                                                           //
+///////////////////////////////////////////////////////////////
+
+
+ul {
+
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+a.nav {
+
+}
 
 
 ///////////////////////////////////////////////////////////////
