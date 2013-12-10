@@ -1,0 +1,94 @@
+
+
+///////////////////////////////////////////////////////////////
+//                                                           //
+//                                                           //
+//                       Variables                           //
+//                                                           //
+//                                                           //
+///////////////////////////////////////////////////////////////
+
+$bgcolor:#003366;
+$secondary:#214768;
+$tertiary:#234e73;
+
+//media query sizes
+$large-size:1000px;
+$medium-size:720px;
+$small-size:320px;
+
+
+
+///////////////////////////////////////////////////////////////
+//                                                           //
+//                                                           //
+//                        Mixins                             //
+//                                                           //
+//                                                           //
+///////////////////////////////////////////////////////////////
+
+@mixin breakpoint($point) {
+  @if $point == large-screen {
+    // Medium-screen is set in foundation.
+    @media all and (min-width: $large-size) { @content; }
+  }
+
+  @else if $point == med-screen {
+    // Small-screen is set in foundation.
+    @media all and (min-width: $medium-size)  { @content; }
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin clear-fix() {
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+///////////////////////////////////////////////////////////////
+//                                                           //
+//                                                           //
+//                        Global                             //
+//                                                           //
+//                                                           //
+///////////////////////////////////////////////////////////////
+
+.content-background{
+  
+	@include breakpoint(large-screen){
+		{
+			background-color:white;
+			min-height:600px;
+			width:400px;
+			@include single-box-shadow;
+		}
+}
+
+body{
+	background-color:$bgcolor; 
+}
+
+
+
+
+///////////////////////////////////////////////////////////////
+//                                                           //
+//                                                           //
+//                        About                              //
+//                                                           //
+//                                                           //
+///////////////////////////////////////////////////////////////
