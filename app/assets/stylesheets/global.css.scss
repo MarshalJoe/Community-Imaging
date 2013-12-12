@@ -104,6 +104,26 @@ body{
 	border-width:1px;	
 }
 
+.service-bg{
+	@include single-box-shadow;
+}
+
+.center-img{
+	margin-top:0px;
+	margin-left:0px;
+
+	@include breakpoint(med-screen){
+			margin-top:0px;
+			margin-left:35px;
+	}
+
+	@include breakpoint(large-screen){
+			margin-top:5px;
+			margin-left:17px;
+	}
+  
+}
+
 ///////////////////////////////////////////////////////////////
 //                                                           //
 //                                                           //
