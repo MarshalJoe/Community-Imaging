@@ -1,0 +1,75 @@
+<% content_for :title do %>
+  Community Imaging | Home
+<% end %>
+
+<% content_for :nav do %>
+  <div class="row">
+    <%= render "nav" %>
+  </div>
+<% end %>          
+
+<% content_for :slideshow do %>
+ <ul data-orbit data-options="navigation_arrows:false; slide_number: false;" >
+    <li>
+      <%= image_tag "scroll-1.png" %>
+    </li>
+    <li>
+      <%= image_tag "scroll-2.png" %>
+    </li>
+    <li>
+      <%= image_tag "scroll-3.png" %>
+    </li>
+    <li>
+      <%= image_tag "scroll-4.png" %>
+    </li>
+    <li>
+      <%= image_tag "scroll-5.png" %>
+    </li>
+  </ul> 
+<% end %>
+
+<% content_for :row1 do %>
+<div class="small-11  small-centered columns">
+  <p>
+    At Community Imaging, we offer the most advanced imaging technology in a patient friendly environment. Our imaging center has been in business since 1990 and we are committed to providing patients with courteous, expedient service. Our unique approach is Patients First care. It is the single most important thing we do. From online services and friendly staff, to superior image quality and accurate reports, the Patients First way of life is the reason patients choose us – we hope you will choose us too!
+  </p>
+</div>
+<% end %>
+
+<% content_for :row2 do%>
+<div class="small-11 small-centered columns">
+  <p>
+    Dedicated and experienced radiologists utilize advanced technologies to provide you and your primary care physician with fast, accurate diagnostic information. Our board-certified Radiologists are on site and work hand in hand with our highly trained technologists.
+  </p>
+</div>
+<% end %>
+
+<% content_for :row3 do%>
+<div class="large-8 large-centered columns">
+  
+  <div class="small-4 columns">
+    <div class="service-bg">
+      <%= image_tag "MRI.png", :class => "center-img" %>
+    </div>
+  </div>
+
+  <div class="small-4 columns ">
+    <div class="service-bg">
+      <%= image_tag "xRay.png", :class => "center-img" %>
+    </div>
+  </div>
+
+  <div class="small-4 columns">
+    <div class="service-bg">
+      <%= image_tag "arthography.png", :class => "center-img" %>
+    </div>
+  </div>
+</div>
+<% end %>
+
+<% content_for :footer do %>
+  <div class="row">
+    <%= render "footer" %>
+  </div>
+<% end %>  
+
