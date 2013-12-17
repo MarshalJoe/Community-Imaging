@@ -41,22 +41,16 @@
 				<li><a href="#tabs-3">X-Ray</a></li>
 			</ul>
 
-	  	<div id="tabs-1">
-				<% content_for :arthrography do %>
-    				<%= render "arthrography" %>
-				<% end %>
-	  	</div>
-	  
 	  	<div id="tabs-2">
-				<% content_for :mri do %>
-    				<%= render "mri" %>
-				<% end %>
+    		<%= render "mri" %>
 	  	</div>
-	  
+			
+	  	<div id="tabs-1">
+    		<%= render "arthrography" %>
+	  	</div>
+	  	  
 	  	<div id="tabs-3">
-				<% content_for :xray do %>
-    				<%= render "xray" %>
-				<% end %>
+    		<%= render "xray" %>
 	  	</div>
 
 		</div>
