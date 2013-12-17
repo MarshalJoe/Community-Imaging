@@ -1,3 +1,9 @@
+
+ <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+ <link rel="stylesheet" href="/resources/demos/style.css">
+
+
+
 <% content_for :title do %>
   Community Imaging | Services
 <% end %>
@@ -25,16 +31,20 @@
 <% end %>
 
   <script>
-  $(function() {
+  $(document).ready(function(){
+  	console.log('test');
+  	$(function() {
     $( "#tabs" ).tabs();
   });
+  	});
   </script>
-<p>hello</p>
+
 
 <% content_for :row1 do %>
 
 	<div class="small-10 small-offset-1 columns div-border">	
 		<div id="tabs">
+			
 			<ul>
 				<li><a href="#tabs-1">Arthrography</a></li>
 				<li><a href="#tabs-2">MRI</a></li>
@@ -42,15 +52,15 @@
 			</ul>
 
 	  	<div id="tabs-1">
-		
+				Test Par 1
 	  	</div>
 	  
 	  	<div id="tabs-2">
-
+				Test Par 2
 	  	</div>
 	  
 	  	<div id="tabs-3">
-	 
+	 			Test Par 3
 	  	</div>
 
 		</div>
