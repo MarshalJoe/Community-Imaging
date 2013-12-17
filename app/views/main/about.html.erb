@@ -2,3 +2,50 @@
 <% content_for :title do %>
   Community Imaging | About
 <% end %>
+
+<% content_for :nav do %>
+    <%= render "nav" %>
+<% end %>
+
+
+<% content_for :row1 do %>
+
+	<div class="small-10 small-offset-1 columns div-border">	
+		<div id="tabs">
+			
+			<ul>
+				<li><a href="#tabs-1">Arthrography</a></li>
+				<li><a href="#tabs-2">MRI</a></li>
+				<li><a href="#tabs-3">X-Ray</a></li>
+			</ul>
+
+	  	<div id="tabs-2">
+    		<%= render "mri" %>
+	  	</div>
+			
+	  	<div id="tabs-1">
+    		<%= render "arthrography" %>
+	  	</div>
+	  	  
+	  	<div id="tabs-3">
+    		<%= render "xray" %>
+	  	</div>
+
+		</div>
+	</div>
+<% end %>
+
+<% content_for :footer do %>
+    <%= render "footer" %>
+<% end %>
+
+<%content_for :javascript do %>
+<script>
+  $(document).ready(function(){
+  	console.log('test');
+  	$(function() {
+    $( "#tabs" ).tabs();
+  });
+  	});
+</script>
+<% end %>

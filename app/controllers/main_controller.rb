@@ -5,6 +5,12 @@ class MainController < ApplicationController
   def services
   end
 
+  def about
+  end
 
+  def contact
+  end
 
+  def patients
+  end
 end
