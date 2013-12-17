@@ -30,16 +30,6 @@
   </ul> 
 <% end %>
 
-  <script>
-  $(document).ready(function(){
-  	console.log('test');
-  	$(function() {
-    $( "#tabs" ).tabs();
-  });
-  	});
-  </script>
-
-
 <% content_for :row1 do %>
 
 	<div class="small-10 small-offset-1 columns div-border">	
@@ -65,10 +55,20 @@
 
 		</div>
 	</div>
-
 <% end %>
 
 <% content_for :footer do %>
     <%= render "footer" %>
+<% end %>
+
+<%content_for :javascript do %>
+<script>
+  $(document).ready(function(){
+  	console.log('test');
+  	$(function() {
+    $( "#tabs" ).tabs();
+  });
+  	});
+</script>
 <% end %>
 
