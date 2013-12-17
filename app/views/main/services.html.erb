@@ -4,8 +4,55 @@
 
 <% content_for :nav do %>
     <%= render "nav" %>
-<% end %> 
+<% end %>
+
+
+<% content_for :slideshow do %>
+ <ul data-orbit data-options="navigation_arrows:false; slide_number: false;" >
+    <li>
+      <%= image_tag "MRI-Scroll-1.png" %>
+    </li>
+    <li>
+      <%= image_tag "MRI-Scroll-2.png" %>
+    </li>
+    <li>
+      <%= image_tag "MRI-Scroll-3.png" %>
+    </li>
+    <li>
+      <%= image_tag "MRI-Scroll-4.png" %>
+    </li>
+  </ul> 
+<% end %>
+
+  <script>
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+  </script>
+<p>hello</p>
+
+<% content_for :row1 do %>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Nunc tincidunt</a></li>
+    <li><a href="#tabs-2">Proin dolor</a></li>
+    <li><a href="#tabs-3">Aenean lacinia</a></li>
+  </ul>
+
+  <div id="tabs-1">
+    <p>Tab 1 content</p>
+  </div>
+  <div id="tabs-2">
+    <p>Tab 2 content</p>
+  </div>
+  <div id="tabs-3">
+    <p>Tab 3 content</p>
+  </div>
+</div>
+<% end %>
 
 <% content_for :footer do %>
     <%= render "footer" %>
-<% end %> 
+<% end %>
+

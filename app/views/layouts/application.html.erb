@@ -9,6 +9,9 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
+  
+    <title><%= yield :title %></title>
+
   </head>
 
   <body>
@@ -22,120 +25,44 @@
           </div>
         </div>
         
-        <!-nav-->
-        <div class="div-border">
-          <div class="row">
-            <div class="small-7 small-centered columns">
-              <ul class="">
-                <li><a id="home" href="#">Home</a></li>
-                <li><a id="about" href="#">About</a></li>
-                <li><a id="contact" href="#">Contact</a></li>
-                <li><a id="services" href="#">Services</a></li>
-                <li><a id="patients" href="#">Patients</a></li>
-                <li><a id="ref-phys" href="#">Referring Physicians</a></li>
-              </ul>
-            </div>
-          </div> 
+        <!--nav!-->
+        <div class="row">
+            <%= yield :nav %>
         </div>
-
 
         <!--slideshow -->
         <div class="div-border">
-          <ul data-orbit data-options="navigation_arrows:false; slide_number: false;" >
-    
-            <li>
-              <%= image_tag "scroll-1.png" %>
-            </li>
-            <li>
-              <%= image_tag "scroll-2.png" %>
-            </li>
-            <li>
-              <%= image_tag "scroll-3.png" %>
-            </li>
-            <li>
-              <%= image_tag "scroll-4.png" %>
-            </li>
-            <li>
-              <%= image_tag "scroll-5.png" %>
-            </li>
-          </ul> 
+          <%= yield :slideshow %>
         </div>
 
-
+        <!--row 1-->
         <div class="row">
-          <div class="small-11  small-centered columns">
-            <p>
-              At Community Imaging, we offer the most advanced imaging technology in a patient friendly environment. Our imaging center has been in business since 1990 and we are committed to providing patients with courteous, expedient service. Our unique approach is Patients First care. It is the single most important thing we do. From online services and friendly staff, to superior image quality and accurate reports, the Patients First way of life is the reason patients choose us – we hope you will choose us too!
-            </p>
-          </div>
+            <%= yield :row1 %>
         </div>
-
+        
+        <!--row 2-->
         <div class="row">
-          <div class="small-11 small-centered columns">
-            <p>
-              Dedicated and experienced radiologists utilize advanced technologies to provide you and your primary care physician with fast, accurate diagnostic information. Our board-certified Radiologists are on site and work hand in hand with our highly trained technologists.
-            </p>
-          </div>
+            <%= yield :row2 %>
         </div>
 
+        <!--row 3-->
         <div class="row">
-          <div class="large-8 large-centered columns">
-            
-            <div class="small-4 columns">
-              <div class="service-bg">
-                <%= image_tag "MRI.png", :class => "center-img" %>
-              </div>
-            </div>
-
-            <div class="small-4 columns ">
-              <div class="service-bg">
-                <%= image_tag "xRay.png", :class => "center-img" %>
-              </div>
-            </div>
-
-            <div class="small-4 columns">
-              <div class="service-bg">
-                <%= image_tag "arthography.png", :class => "center-img" %>
-              </div>
-            </div>
-          </div>
+          <%= yield :row3 %>
         </div>
-    </div>
 
-  <footer class="row">
-    <div class="large-12 columns">
-      <div class="row">
-        <div class="large-6 columns">
-          <p>© Copyright no one at all. Go to town.</p>
+        <!--row 4-->
+        <div class="row">
+          <%= yield :row4 %>
         </div>
-        <div class="large-6 columns">
-          <ul class="inline-list right">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-          </ul>
-        </div>
+
       </div>
-    </div> 
-  </footer>
-</div>
+     
+        <!--footer -->
+        <div class="row">
+          <%= yield :footer %>
+        </div>
 
-
-
-    
-
-
-
-<%= yield %>
     
 <%= javascript_include_tag "application" %>
-  
-
-
-
-
-
-
   </body>
 </html>

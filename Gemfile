@@ -40,6 +40,8 @@ gem 'rails_12factor'
 
 gem 'hirb'
 
+gem 'jquery-ui-rails'
+
 
 
 # Use ActiveModel has_secure_password
