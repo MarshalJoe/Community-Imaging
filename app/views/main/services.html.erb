@@ -42,15 +42,21 @@
 			</ul>
 
 	  	<div id="tabs-1">
-				Test Par 1
+				<% content_for :arthrography do %>
+    				<%= render "arthrography" %>
+				<% end %>
 	  	</div>
 	  
 	  	<div id="tabs-2">
-				Test Par 2
+				<% content_for :mri do %>
+    				<%= render "mri" %>
+				<% end %>
 	  	</div>
 	  
 	  	<div id="tabs-3">
-	 			Test Par 3
+				<% content_for :xray do %>
+    				<%= render "xray" %>
+				<% end %>
 	  	</div>
 
 		</div>
