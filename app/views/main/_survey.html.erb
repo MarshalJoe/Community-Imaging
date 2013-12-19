@@ -8,6 +8,31 @@
     <b> Please rate your experience at Community Imaging. </b>
     </span>
 
+    <ol>
+
+      
+
+    </ol>
+     
+
+    Based on your experience, would you recommend Community Imaging to a friend or family 
+    member? 
+    <div class="space"> Yes </div><input type="radio" name= "recommend" value="yes"> </input>
+    <div class="space"> No </div><input type="radio" name= "recommend" value="no"> </input> 
+  
+
+    How did you hear about us?
+    <input type="text"  placeholder="internet, doctor referral etc." name='hear'> 
+
+    <button type="submit" class="btn" input type="submit" value="Send">Submit</button>
+  </form>
+  </div>
+</div>
+
+<% content_for :javascript do %>
+
+<script>
+
       var categoryArray = ["Scheduling",
                            "Receptionist’s greeting and promptness",
                            "Ease of completing forms",
@@ -17,94 +42,28 @@
                            "Patient Privacy",
                            "Cleanliness of Facility",
                            "Overall Experience at Community Imaging",
-                           "Ease of completing forms",
                            "Ease of completing forms"];
+                           
 
 
       var ratingArray = ["excellent", "very good", "good", "fair", "poor"];
 
-      Scheduling: 
-      Excellent <input class="ispace" type="radio" name="Scheduling" value="excellent"></input>
-      Very Good <input type="radio" name="Scheduling" value="Very Good"> </input>
-      Good <input type="radio" name="Scheduling" value="Good"></input>
-      Fair <input type="radio" name="Scheduling" value="Fair"></input>
-      Poor <input type="radio" name="Scheduling" value="Poor"></input>
-  
+      for(var i = 0; i < categoryArray.length; i++){
+        
+        $("ol").append( categoryArray[i] + ': <br>');
 
-      Receptionist’s greeting and promptness: 
-        Excellent <input type="radio" name="greeting" value="excellent"></input>
-        Very Good <input type="radio" name="greeting" value="Very Good"></input>
-        Good <input type="radio" name="greeting" value="Good"></input>
-        Fair <input type="radio" name="greeting" value="Fair"></input>
-        Poor <input type="radio" name="greeting" value="Poor"></input>
-   
-      Ease of completing  forms: 
-        Excellent <input type="radio" name="completingForms" value="excellent"></input>
-        Very  Good <input type="radio" name="completingForms" value="Very Good"></input>
-        Good <input type="radio" name="completingForms" value="Good"></input>
-        Fair <input type="radio" name="completingForms" value="Fair"></input>
-        Poor <input type="radio" name="completingForms" value="Poor"></input>
+        for(var x = 0; x < ratingArray.length; x++){
 
+          $("ol").append( ratingArray[x] + "<input type='radio' name='overall' value=" + "'" + ratingArray[x] + "'" + "></input>" );  
+        }
 
-      Length of time waiting for procedure: 
-        Excellent <input type="radio" name="timeWaiting" value="excellent"></input>                           
-        Very Good <input type="radio" name="timeWaiting" value="Very Good"></input>
-        Good <input type="radio" name="timeWaiting" value="Good"></input>
-        Fair <input type="radio" name="timeWaiting" value="Fair"></input>
-        Poor <input type="radio" name="timeWaiting" value="Poor"></input>
-
-
-      Care and professionalism of the technologist: 
-        Excellent <input type="radio" name="care" value="excellent"></input>
-        Very Good <input type="radio" name="care" value="Very Good"></input>
-        Good <input type="radio" name="care" value="Good"></input>
-        Fair <input type="radio" name="care" value="Fair"></input>
-        Poor <input type="radio" name="care" value="Poor"></input>
-    
-
-      Explanation of exam and questions answered: 
-        Excellent <input type="radio" name="explanation" value="excellent"></input>
-        Very Good <input type="radio" name="explanation" value="Very Good"></input>
-        Good <input type="radio" name="explanation" value="Good"></input>
-        Fair <input type="radio" name="explanation" value="Fair"></input>
-        Poor <input type="radio" name="explanation" value="Poor"></input>
-  
-
-      Patient Privacy: 
-        Excellent <input type="radio" name="privacy" value="excellent"></input>
-        Very Good <input type="radio" name="privacy" value="Very Good"></input>
-        Good <input type="radio" name="privacy" value="Good"></input>
-        Fair <input type="radio" name="privacy" value="Fair"></input>
-        Poor <input type="radio" name="privacy" value="Poor"></input>
-    
-
-      Cleanliness of Facility: 
-        Excellent <input type="radio" name="cleanliness" value="excellent"></input>
-        Very Good <input type="radio" name="cleanliness" value="Very Good"></input>
-        Good <input type="radio" name="cleanliness" value="Good"></input>
-        Fair <input type="radio" name="cleanliness" value="Fair"></input>
-        Poor <input type="radio" name="cleanliness" value="Poor"></input>
-  
-
-      Overall Experience at Community Imaging: 
-        Excellent <input type="radio" name="overall" value="excellent"></input>
-        Very Good <input type="radio" name="overall" value="Very Good"></input>
-        Good </div> <input type="radio" name="overall" value="Good"></input>
-        Fair </div><input type="radio" name="overall" value="Fair"></input>
-        Poor </div><input type="radio" name="Ooverall" value="Poor"></input>
+          $("ol").append('<br>');
      
+      };
 
-      Based on your experience, would you recommend Community Imaging to a friend or family 
-      member? <div class="space"> Yes </div><input type="radio" name= "recommend" value="yes"> </input>
-      <div class="space"> No </div><input type="radio" name= "recommend" value="no"> </input> 
-  
+  </script>
 
-      How did you hear about us?
+<% end %>
 
-      <input type="text"  placeholder="internet, doctor referral etc." name='hear'> 
 
-      <button type="submit" class="btn" input type="submit" value="Send">Submit</button>
-  </form>
-  </div>
-</div>
 
