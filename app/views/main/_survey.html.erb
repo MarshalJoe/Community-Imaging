@@ -10,15 +10,15 @@
 
     <ol>
 
-      
+      <!-- add survey with radio buttons here !-->
 
     </ol>
      
 
     Based on your experience, would you recommend Community Imaging to a friend or family 
     member? 
-    <div class="space"> Yes </div><input type="radio" name= "recommend" value="yes"> </input>
-    <div class="space"> No </div><input type="radio" name= "recommend" value="no"> </input> 
+    Yes <input type="radio" name= "recommend" value="yes"> </input>
+    No  <input type="radio" name= "recommend" value="no"> </input>  <br>
   
 
     How did you hear about us?
@@ -48,12 +48,16 @@
 
       var ratingArray = ["excellent", "very good", "good", "fair", "poor"];
 
+      //iterate through category array
       for(var i = 0; i < categoryArray.length; i++){
         
+        //add the category name
         $("ol").append( categoryArray[i] + ': <br>');
 
+        //iterate through rating array
         for(var x = 0; x < ratingArray.length; x++){
 
+          //add each of the ratings plus markup
           $("ol").append( ratingArray[x] + "<input type='radio' name='overall' value=" + "'" + ratingArray[x] + "'" + "></input>" );  
         }
 
