@@ -65,12 +65,18 @@
     for(var i = 0; i < categoryArray.length; i++){
 
         //add the category name
-        $("ol").append( categoryArray[i] + ': <br>');
+        $("ol").append( categoryArray[i] + '<br>');
 
         //iterate through rating array
         for(var x = 0; x < answerArray.length; x++){
 
+          //add each yes or no radio button & markup
+          $("ol").append( answerArray[x] + "<input type='radio' name='overall' value=" + "'" + answerArray[x] + "'" + "></input>" );  
+        }
 
+        $("ol").append('<br>');
+
+        };
 
   </script>
 <% end %>
