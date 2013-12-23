@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="small-8 columns">
+
+        <div class="small-5 small-offset-1 column"> 
+            <input type="text" placeholder="name" name="fname">
+            <input type="text" placeholder="address" name="address">
+            <input type="text" placeholder="state" name="state">
+            <input type="text" placeholder="home phone" name="h-phone">
+            <input type="text" placeholder="email" name ="email">
+            <input type="text" placeholder="height" name="height">
+        </div>
+
+        <div class="small-5 column"> 
+            <input type="text" placeholder="last name" name="lname">
+            <input type="text" placeholder="city" name="city">
+            <input type="text" placeholder="zip" name="zip">
+            <input type="text" placeholder="cell phone" name="c-phone">
+            <input type="text" placeholder="weight" name="weight"> 
+        </div> 
+
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="small-8 columns">
+
+    <div class="small-5 small-offset-1 column"> 
+      <input type="text" placeholder="referring physician" name="physician">
+      <input type="text" placeholder="procedure type and instructions" name="procedure">     
+      <input type="text" placeholder="group number" name="group-number">
+      <input type="text" placeholder="insurance phone number" name="ins-phone-number">
+    </div>
+
+    <div class="small-5 column"> 
+      <input type="text" placeholder="referring physician phone" name="physician-phone">
+      <input type="text" placeholder="insurance provider" name="insurance-provider">
+      <input type="text" placeholder="ID number/policy number" name="id-number">
+    </div> 
+
+  </div>
+</div>
+
+<hr>
+
+<% content_for :javascript do %>
+  <script>
+    var categoryArray =['Gunshot/BBS/Shrapnel wounds:',
+                        'Vascular surgery:',
+                        'Pacemaker/Heart surgery:',
+                        'Brain surgery/Aneurysm Clips:',
+                        'Diabetic:',
+                        'Take Glucophage/Metformin?',
+                        'History of Cancer/Tumors:',
+                        'Tattoos/Body Piercings:',
+                        'Kidney/Liver Problems:',
+                        'Contrast Allergy:',
+                        'Ear Implants/Hearing Aids:',
+                        'Blood/Bleeding Disorder:', 
+                        'IUD:'];
+
+    var answerArray =['yes','no'];
+
+    for(var i = 0; i < categoryArray.length; i++){
+
+        //add the category name
+        $("ol").append( categoryArray[i] + ': <br>');
+
+        //iterate through rating array
+        for(var x = 0; x < answerArray.length; x++){
+
+
+
+  </script>
+<% end %>
