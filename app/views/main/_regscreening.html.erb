@@ -44,6 +44,20 @@
 
 <hr>
 
+  <div class='row'>
+    <div class="small-8 small-offset-1 columns">
+      <ol>
+        <!--- Survey goes here !-->
+      </ol>
+    </div>
+  </div> 
+
+  <div class='row'>
+    <div class='small-offset-1 columns'>
+      <a href="#" class="button">Submit</a>
+    </div>
+  </div>
+
 <% content_for :javascript do %>
   <script>
     var categoryArray =['Gunshot/BBS/Shrapnel wounds:',
@@ -62,15 +76,16 @@
 
     var answerArray =['yes','no'];
 
+    // iterate through category array
     for(var i = 0; i < categoryArray.length; i++){
 
-        //add the category name
+        // add the category name
         $("ol").append( categoryArray[i] + '<br>');
 
-        //iterate through rating array
+        // iterate through rating array
         for(var x = 0; x < answerArray.length; x++){
 
-          //add each yes or no radio button & markup
+          // add yes or no radio button & markup
           $("ol").append( answerArray[x] + "<input type='radio' name='overall' value=" + "'" + answerArray[x] + "'" + "></input>" );  
         }
 
