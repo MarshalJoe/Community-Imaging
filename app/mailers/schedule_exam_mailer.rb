@@ -1,7 +1,11 @@
-class UserMailer < ActionMailer::Base
-  default from: 'lynlogin@gmail.com'
+class ScheduleExamMailer < ActionMailer::Base
+  default from: "lynlogin@gmail.com"
 
-  def exam_email
-    mail(to: 'lyndawellhausen@gmail.com', subject: 'Welcome to My Awesome Site')
+
+  def schedule_exam_email
+
+    mail(to: "lyndawellhausen@gmail.com", subject: 'Exam request from patient')
   end
+
+
 end
