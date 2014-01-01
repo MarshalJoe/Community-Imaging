@@ -3,7 +3,7 @@
         <%= current_user.fname  %>        
         </li> thanks for signing in. Please fill out the form below before your visit.
 
-          <div class="row">
+  <div class="row">
     <div class="small-8 columns">
 
         <div class="small-5 small-offset-1 column"> 
@@ -96,30 +96,17 @@
         $("#registration").append('<br>');
 
         };
-
-
   </script>
 <% end %>
 
+<% else %>
+  <li>
+  Please <%= link_to('Login', new_user_session_path) %> in order to proceed
+  to the registration and screening for new patients. 
+  </li>
+<% end %>
 
-
-
-
-
-
-
-
-
-
-
-
-
-        <% else %>
-        <li>
-        Please <%= link_to('Login', new_user_session_path) %> in order to proceed
-        to the registration and screening for new patients. 
-        </li>
-        <% end %>
+testing
 
 
 
