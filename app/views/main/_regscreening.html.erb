@@ -1,23 +1,27 @@
-<div class="row">
+        <% if user_signed_in? %>
+        <li> hello
+        <%= current_user.fname  %>        
+        </li> thanks for signing in. Please fill out the form below before your visit.
+
+          <div class="row">
     <div class="small-8 columns">
 
         <div class="small-5 small-offset-1 column"> 
-            <input type="text" placeholder="name" name="fname">
+            
             <input type="text" placeholder="address" name="address">
             <input type="text" placeholder="state" name="state">
             <input type="text" placeholder="home phone" name="h-phone">
-            <input type="text" placeholder="email" name ="email">
+            
             <input type="text" placeholder="height" name="height">
         </div>
 
         <div class="small-5 column"> 
-            <input type="text" placeholder="last name" name="lname">
+
             <input type="text" placeholder="city" name="city">
             <input type="text" placeholder="zip" name="zip">
             <input type="text" placeholder="cell phone" name="c-phone">
             <input type="text" placeholder="weight" name="weight"> 
         </div> 
-
     </div>
 </div>
 
@@ -96,3 +100,28 @@
 
   </script>
 <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <% else %>
+        <li>
+        Please <%= link_to('Login', new_user_session_path) %> in order to proceed
+        to the registration and screening for new patients. 
+        </li>
+        <% end %>
+
+
+
+
+
