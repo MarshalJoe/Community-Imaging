@@ -42,6 +42,10 @@ gem 'hirb'
 
 gem 'jquery-ui-rails'
 
+gem 'devise'
+
+gem 'simple_form'
+
 
 
 # Use ActiveModel has_secure_password
