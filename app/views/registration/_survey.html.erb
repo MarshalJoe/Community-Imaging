@@ -1,0 +1,70 @@
+<form method="post" name="Survey" action="">
+
+<div class="row">
+  <div class="small-10 small-offset-1 div-border">
+    <span style=""
+    <b> Please rate your experience at Community Imaging. </b>
+    </span>
+
+    <div id="survey">
+
+      <!-- add survey with radio buttons here !-->
+
+    </div>
+     
+
+    Based on your experience, would you recommend Community Imaging to a friend or family 
+    member? 
+    Yes <input type="radio" name="recommend" value="yes"> </input>
+    No  <input type="radio" name="recommend" value="no"> </input>  <br>
+  
+
+    How did you hear about us?
+    <input type="text"  placeholder="internet, doctor referral etc." name='hear'> 
+
+    <button type="submit" class="btn" input type="submit" value="Send">Submit</button>
+  </form>
+  </div>
+</div>
+
+<% content_for :javascript do %>
+<script>
+var categoryArray = ["Scheduling",
+                     "Receptionist’s greeting and promptness",
+                     "Ease of completing forms",
+                     "Length of time waiting for procedure",
+                     "Care and professionalism of the technologist",
+                     "Explanation of exam and questions answered",
+                     "Patient Privacy",
+                     "Cleanliness of Facility",
+                     "Overall Experience at Community Imaging",
+                     "Ease of completing forms"];
+
+var ratingArray = ["excellent", "very good", "good", "fair", "poor"];
+  
+//iterate through category array
+for(var i = 0; i < categoryArray.length; i++){
+  
+  //add the category name
+  $("#survey").append( categoryArray[i] + ': <br>');
+
+  //iterate through rating array
+  for(var x = 0; x < ratingArray.length; x++){
+
+    //add each of the ratings plus markup
+    $("#survey").append( ratingArray[x] + "<input type='radio' name='overall' value=" + "'" + ratingArray[x] + "'" + "></input>" );  
+  }
+
+    $("#survey").append('<br>');
+
+};
+
+</script>
+<% end %>
+
+
+
+
+
+
+
