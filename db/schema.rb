@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140102010420) do
+ActiveRecord::Schema.define(version: 20140102012156) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,19 @@ ActiveRecord::Schema.define(version: 20140102010420) do
     t.string   "group_number"
     t.string   "id_number"
     t.string   "insurance_phone"
+    t.string   "gunshot_bbs_shrapnel_wounds"
+    t.string   "vascular_surgery"
+    t.string   "pacemaker_heart_surgery"
+    t.string   "brain_surgery_aneurysm_clips"
+    t.string   "diabetic"
+    t.string   "glucophage_metformin"
+    t.string   "cancer_tumors"
+    t.string   "tattoos_body_piercings"
+    t.string   "kidney_liver_problems"
+    t.string   "contrast_allergy"
+    t.string   "ear_implants_hearing_aids"
+    t.string   "blood_bleeding_disorder"
+    t.string   "IUD"
   end
 
   create_table "users", force: true do |t|
