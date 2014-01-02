@@ -46,6 +46,8 @@ gem 'devise'
 
 gem 'simple_form'
 
+gem 'pry'
+
 
 
 # Use ActiveModel has_secure_password

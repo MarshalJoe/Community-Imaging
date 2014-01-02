@@ -12,10 +12,11 @@ def index
   end
 
   def create
-    @registration = Registration.new(params[:post])
+    pry
+    @registration = Registration.new(registration_params)
 
     if @registration.save
-      redirect_to registrations_path,  :notice => "Your post was saved"
+      redirect_to root_url,  :notice => "Your post was saved"
     else
       render "new"
     end
@@ -37,4 +38,9 @@ def index
     @registration = Registration.new
   end
 
+  private
+
+  def registration_params
+    params.require(:registration).permit(:fname, :lname)
+  end
 end
