@@ -1,18 +1,19 @@
  <div class="row">
     <div class="small-8 columns">
         <div class="small-5 small-offset-1 column">
-          <%= simple_form_for @registration, url: screenings_path do |f| %>
-            <%= f.input :fname, label: "first name", placeholder: "first name" %>
-            <%= f.input :address, label: "address", placeholder:"address" %>
-            <%= f.input :state, label: "state", placeholder:"state" %>
-            <%= f.input :home_phone, label: "home phone", placeholder:"home phone" %>
+          
+          <%= form_for @registration do |f| %>
+          <%= f.label :fname, 'first name' %>:
+          <%= f.text_field :fname %><br />
+          <%= f.label :lname, 'last name' %>:
+          <%= f.text_field :lname %><br />
+          <%= f.submit %>
+          <% end %>
+
         </div>
 
         <div class="small-5 column">
-          <%= f.input :lname, label: "last Name", placeholder: "last name" %>
-          <%= f.input :city, label: "city", placeholder: "city" %>
-          <%= f.input :zip, label: "zip", placeholder:"zip" %>
-          <%= f.input :cell_phone, label: "cell phone", placeholder:"cell phone" %>
+
         </div>
     </div>
 </div>
@@ -23,11 +24,11 @@
   <div class="small-8 columns">
 
     <div class="small-5 small-offset-1 column">
-          <%= f.input :height, label: "height", placeholder:"height" %>
+
     </div>
 
     <div class="small-5 column">
-          <%= f.input :weight, label: "weight", placeholder:"weight" %>
+
     </div>
 
   </div>
@@ -45,8 +46,7 @@
 
   <div class='row'>
     <div class='small-offset-1 columns'>
-          <%= f.submit "Submit" %>
-          <% end %> 
+      <a href="#" class="button">Submit</a>
     </div>
   </div>
 
