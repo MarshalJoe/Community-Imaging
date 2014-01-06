@@ -24,12 +24,18 @@
 
     <div class="small-5 small-offset-1 column">
           <%= f.input :height, label: "height", placeholder:"height" %>
+          <%= f.input :referring_physician, label: "referring physician", placeholder:"referring physician" %>
+          <%= f.input :insurance_provider, label: "insurance provider", placeholder:"insurance provider" %>
+          <%= f.input :group_number, label: "group number", placeholder:"group number" %>
+
     </div>
 
     <div class="small-5 column">
           <%= f.input :weight, label: "weight", placeholder:"weight" %>
+          <%= f.input :procedure_type, label: "procedure type", placeholder:"procedure type" %>
+          <%= f.input :id_number, label: "id number", placeholder:"id number" %>
+          <%= f.input :insurance_phone, label: "insurance phone", placeholder:"insurance phone" %>
     </div>
-
   </div>
 </div>
 
@@ -44,7 +50,14 @@
   </div>
 
   <div class='row'>
-    <div class='small-offset-1 columns'>
+    <div class='small-11 small-offset-1 columns'>
+
+      <%= label :gunshot_bbs_shrapnel_wounds, "gunshot_bbs_shrapnel_wounds? yes:" %>
+      <%= f.radio_button :gunshot_bbs_shrapnel_wounds, true, :value => true %>
+      <%= label :gunshot_bbs_shrapnel_wounds, "no" %>
+      <%= f.radio_button :gunshot_bbs_shrapnel_wounds, false, :value => false %>
+
+
           <%= f.submit "Submit" %>
           <% end %> 
     </div>
@@ -67,23 +80,6 @@
                         'IUD:'];
 
     var answerArray =['yes','no'];
-
-    // iterate through condition array
-    for(var i = 0; i < conditionArray.length; i++){
-
-        // add the category name
-        $("#registration").append( conditionArray[i] + '<br>');
-
-        // iterate through rating array
-        for(var x = 0; x < answerArray.length; x++){
-
-          // add yes or no radio button & markup
-          $("#registration").append( answerArray[x] + "<input type='radio' name='overall' value=" + "'" + answerArray[x] + "'" + "></input>" );
-        }
-
-        $("#registration").append('<br>');
-
-        };
 
 
   </script>
