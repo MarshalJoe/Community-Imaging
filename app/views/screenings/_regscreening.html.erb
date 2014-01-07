@@ -8,7 +8,7 @@
             <%= f.input :home_phone, label: "home phone", placeholder:"home phone" %>
         </div>
 
-        <div class="small-5 column">
+        <div class="small-5 columns">
           <%= f.input :lname, label: "last Name", placeholder: "last name" %>
           <%= f.input :city, label: "city", placeholder: "city" %>
           <%= f.input :zip, label: "zip", placeholder:"zip" %>
@@ -20,7 +20,7 @@
 <hr>
 
 <div class="row">
-  <div class="small-8 columns">
+  <div class="large-8 columns">
 
     <div class="small-5 small-offset-1 column">
           <%= f.input :height, label: "height", placeholder:"height" %>
@@ -30,7 +30,7 @@
 
     </div>
 
-    <div class="small-5 column">
+    <div class="small-5 columns">
           <%= f.input :weight, label: "weight", placeholder:"weight" %>
           <%= f.input :procedure_type, label: "procedure type", placeholder:"procedure type" %>
           <%= f.input :id_number, label: "id number", placeholder:"id number" %>
@@ -42,26 +42,246 @@
 <hr>
 
   <div class='row'>
-    <div class="small-8 small-offset-1 columns">
-      <ol id='registration'>
-        <!--- Survey goes here !-->
-      </ol>
+    <div class="large-12 columns div-border">
+    
+       <div class="large-5 columns">
+          <%= label :gunshot_bbs_shrapnel_wounds, "gunshot, bbs, or shrapnel wounds?" %>
+       </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :gunshot_bbs_shrapnel_wounds, true, :value => true %>
+      </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :gunshot_bbs_shrapnel_wounds, false, :value => false %>
+      </div>
+
     </div>
   </div>
+
+    <div class='row'>
+    <div class="large-12 columns div-border">
+    
+       <div class="large-5 columns">
+          <%= label :vascular_surgery, "vascular_surgery?" %>
+       </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :vascular_surgery, true, :value => true %>
+      </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :vascular_surgery, false, :value => false %>
+      </div>
+
+    </div>
+  </div>
+
+    <div class='row'>
+    <div class="large-12 columns div-border">
+    
+       <div class="large-5 columns">
+          <%= label :pacemaker_heart_surgery, "pacemaker_heart_surgery?" %>
+       </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :pacemaker_heart_surgery, true, :value => true %>
+      </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :pacemaker_heart_surgery, false, :value => false %>
+      </div>
+
+    </div>
+    </div>
+
+    <div class='row'>
+    <div class="large-12 columns div-border">
+    
+       <div class="large-5 columns">
+          <%= label :brain_surgery_aneurysm_clips, "brain_surgery_aneurysm_clips?" %>
+       </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :brain_surgery_aneurysm_clips, true, :value => true %>
+      </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :brain_surgery_aneurysm_clips, false, :value => false %>
+      </div>
+
+    </div>
+    </div>
+
+    <div class='row'>
+    <div class="large-12 columns div-border">
+    
+       <div class="large-5 columns">
+          <%= label :diabetic, "diabetic?" %>
+       </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :diabetic, true, :value => true %>
+      </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :diabetic, false, :value => false %>
+      </div>
+
+    </div>
+    </div>
+
+    <div class='row'>
+    <div class="large-12 columns div-border">
+    
+       <div class="large-5 columns">
+          <%= label :glucophage_metformin, "glucophage_metformin?" %>
+       </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :glucophage_metformin, true, :value => true %>
+      </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :glucophage_metformin, false, :value => false %>
+      </div>
+
+    </div>
+    </div>
+
+    <div class='row'>
+    <div class="large-12 columns div-border">
+    
+       <div class="large-5 columns">
+          <%= label :cancer_tumors, "cancer_tumors?" %>
+       </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :cancer_tumors, true, :value => true %>
+      </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :cancer_tumors, false, :value => false %>
+      </div>
+
+    </div>
+    </div>
+
+    <div class='row'>
+    <div class="large-12 columns div-border">
+    
+       <div class="large-5 columns">
+          <%= label :tattoos_body_piercings, "tattoos_body_piercings?" %>
+       </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :tattoos_body_piercings, true, :value => true %>
+      </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :tattoos_body_piercings, false, :value => false %>
+      </div>
+
+    </div>
+    </div>
+
+    <div class='row'>
+    <div class="large-12 columns div-border">
+    
+       <div class="large-5 columns">
+          <%= label :kidney_liver_problems, "kidney_liver_problems?" %>
+       </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :kidney_liver_problems, true, :value => true %>
+      </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :kidney_liver_problems, false, :value => false %>
+      </div>
+
+    </div>
+    </div>
+
+    <div class='row'>
+    <div class="large-12 columns div-border">
+    
+       <div class="large-5 columns">
+          <%= label :contrast_allergy, "contrast_allergy?" %>
+       </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :contrast_allergy, true, :value => true %>
+      </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :contrast_allergy, false, :value => false %>
+      </div>
+
+    </div>
+    </div>
+
+    <div class='row'>
+    <div class="large-12 columns div-border">
+    
+       <div class="large-5 columns">
+          <%= label :ear_implants_hearing_aids, "ear_implants_hearing_aids?" %>
+       </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :ear_implants_hearing_aids, true, :value => true %>
+      </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :ear_implants_hearing_aids, false, :value => false %>
+      </div>
+
+    </div>
+    </div>
+
+    <div class='row'>
+    <div class="large-12 columns div-border">
+    
+       <div class="large-5 columns">
+          <%= label :blood_bleeding_disorder, "blood_bleeding_disorder?" %>
+       </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :blood_bleeding_disorder, true, :value => true %>
+      </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :blood_bleeding_disorder, false, :value => false %>
+      </div>
+
+    </div>
+    </div>
+
+    <div class='row'>
+    <div class="large-12 columns div-border">
+    
+       <div class="large-5 columns">
+          <%= label :IUD, "IUD?" %>
+       </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :IUD, true, :value => true %>
+      </div>
+
+      <div class="large-3 columns div-border">
+          <%= f.radio_button :IUD, false, :value => false %>
+      </div>
+
+    </div>
+    </div>
 
   <div class='row'>
-    <div class='small-11 small-offset-1 columns'>
-
-      <%= label :gunshot_bbs_shrapnel_wounds, "gunshot_bbs_shrapnel_wounds? yes:" %>
-      <%= f.radio_button :gunshot_bbs_shrapnel_wounds, true, :value => true %>
-      <%= label :gunshot_bbs_shrapnel_wounds, "no" %>
-      <%= f.radio_button :gunshot_bbs_shrapnel_wounds, false, :value => false %>
-
-
-          <%= f.submit "Submit" %>
-          <% end %> 
+    <div class='large-8 large-offset-4 small-offset-2 columns'>
+      <%= f.submit "Submit" %>
+      <% end %> 
     </div>
   </div>
+
 
 <% content_for :javascript do %>
   <script>

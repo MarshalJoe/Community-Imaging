@@ -12,7 +12,6 @@ def index
   end
 
   def create
-    pry
     @registration = Registration.new(registration_params)
 
     if @registration.save
