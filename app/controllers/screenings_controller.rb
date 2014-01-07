@@ -40,6 +40,10 @@ def index
   private
 
   def registration_params
-    params.require(:registration).permit(:fname, :lname)
+    params.require(:registration).permit(:fname, :lname, :address, :city,:state,:zip,
+      :home_phone,:cell_phone,:height,:weight,:referring_physician,:procedure_type,:insurance_provider,
+      :group_number,:id_number,:insurance_phone,:gunshot_bbs_shrapnel_wounds,:vascular_surgery,:pacemaker_heart_surgery,
+      :brain_surgery_aneurysm_clips,:diabetic,:glucophage_metformin,:cancer_tumors,:tattoos_body_piercings,
+      :kidney_liver_problems,:contrast_allergy,:ear_implants_hearing_aids,:blood_bleeding_disorder, :IUD)
   end
 end
