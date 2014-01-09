@@ -5,16 +5,27 @@
           <%= label :recommend, " Based on your experience, would you recommend Community Imaging to a friend or family member?" %>
         </div>
 
-        <div class="small-5 columns">
-          
-        </div>
+  <div class='row'>
+    <div class="large-12 columns div-border">
+      <div class="large-5 columns">
+        <%= label :scheduling, "Scheduling?" %>
+      </div>
 
+      <div class="large-3 columns div-border">
+        <%= f.radio_button :gunshot_bbs_shrapnel_wounds, true, :value => true %>
+      </div>
+
+      <div class="large-3 columns div-border">
+        <%= f.radio_button :gunshot_bbs_shrapnel_wounds, false, :value => false %>
+      </div>
+    </div>
+  </div>
       <%= f.submit "Submit" %>
       <% end %> 
     </div>
 </div>
 
-<!--                      "Scheduling",
+<!--                 "Scheduling",
                      "Receptionist’s greeting and promptness",
                      "Ease of completing forms",
                      "Length of time waiting for procedure",
@@ -23,25 +34,7 @@
                      "Patient Privacy",
                      "Cleanliness of Facility",
                      "Overall Experience at Community Imaging",
-                     "Ease of completing forms"]
-
+                     "Ease of completing forms"
                      "excellent", "very good", "good", "fair", "poor" -->
 
 
-  <div class='row'>
-    <div class="large-12 columns div-border">
-    
-       <div class="large-5 columns">
-          <%= label :scheduling, "Scheduling?" %>
-       </div>
-
-      <div class="large-3 columns div-border">
-          <%= f.radio_button :gunshot_bbs_shrapnel_wounds, true, :value => true %>
-      </div>
-
-      <div class="large-3 columns div-border">
-          <%= f.radio_button :gunshot_bbs_shrapnel_wounds, false, :value => false %>
-      </div>
-
-    </div>
-  </div>
