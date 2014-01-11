@@ -1,6 +1,6 @@
  <div class="row">
-    <div class="small-8 columns">
-        <div class="small-5 columns">
+    <div class="small-12 columns">
+        <div class="small-12 columns">
           <%= simple_form_for survey, url: surveys_path do |f| %>
           <%= label :recommend, " Based on your experience, would you recommend Community Imaging to a friend or family member?" %>
         </div>
@@ -20,11 +20,93 @@
         <%= f.collection_radio_buttons :scheduling, Survey::SURVEY_OPTIONS, :first, :last %>
       </div>
 
-      <div class="large-3 columns div-border">
-        <% %>
+    </div>
+  </div>
+
+
+  <div class='row'>
+    <div class="large-12 columns div-border">
+  
+      <div class="large-12 columns">
+        <%= label :receptionist_greeting, "Receptionist's greeting and promptness?" %>
+      </div>
+
+      <div class="large-12 columns div-border">
+        <%= f.collection_radio_buttons :receptionist_greeting, Survey::SURVEY_OPTIONS, :first, :last %>
       </div>
     </div>
   </div>
+
+
+  <div class='row'>
+    <div class="large-12 columns div-border">
+  
+      <div class="large-12 columns">
+        <%= label :completing_forms, "Ease of completing forms?" %>
+      </div>
+
+      <div class="large-12 columns div-border">
+        <%= f.collection_radio_buttons :completing_forms, Survey::SURVEY_OPTIONS, :first, :last %>
+      </div>
+    </div>
+  </div>
+
+    <div class='row'>
+    <div class="large-12 columns div-border">
+  
+      <div class="large-12 columns">
+        <%= label :awaiting_procedure, "Length of time waiting for procedure?" %>
+      </div>
+
+      <div class="large-12 columns div-border">
+        <%= f.collection_radio_buttons :awaiting_procedure, Survey::SURVEY_OPTIONS, :first, :last %>
+      </div>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class="large-12 columns div-border">
+  
+      <div class="large-12 columns">
+        <%= label :technologist, "Care and professionalism of the technologis:" %>
+      </div>
+
+      <div class="large-12 columns div-border">
+        <%= f.collection_radio_buttons :technologist, Survey::SURVEY_OPTIONS, :first, :last %>
+      </div>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div class="large-12 columns div-border">
+  
+      <div class="large-12 columns">
+        <%= label :explanation, "Explanation of exam and questions answered:" %>
+      </div>
+
+      <div class="large-12 columns div-border">
+        <%= f.collection_radio_buttons :explanation, Survey::SURVEY_OPTIONS, :first, :last %>
+      </div>
+    </div>
+  </div>
+
+    <div class='row'>
+    <div class="large-12 columns div-border">
+  
+      <div class="large-12 columns">
+        <%= label :explanation, "Patient Privacy:" %>
+      </div>
+
+      <div class="large-12 columns div-border">
+        <%= f.collection_radio_buttons :explanation, Survey::SURVEY_OPTIONS, :first, :last %>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
       <%= f.submit "Submit" %>
       <% end %> 
     </div>
