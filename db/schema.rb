@@ -11,10 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140102012156) do
+ActiveRecord::Schema.define(version: 20140108032759) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "leads", force: true do |t|
+    t.string   "fname"
+    t.string   "lname"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip"
+    t.integer  "home_phone"
+    t.integer  "cell_phone"
+    t.string   "email"
+    t.string   "time_to_call"
+    t.string   "status"
+    t.string   "exam"
+    t.string   "ordering_physician"
+    t.text     "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "registrations", force: true do |t|
     t.datetime "created_at"
@@ -48,6 +67,20 @@ ActiveRecord::Schema.define(version: 20140102012156) do
     t.string   "ear_implants_hearing_aids"
     t.string   "blood_bleeding_disorder"
     t.string   "IUD"
+  end
+
+  create_table "surveys", force: true do |t|
+    t.string  "recommend"
+    t.integer "scheduling"
+    t.integer "receptionist_greeting"
+    t.integer "completing_forms"
+    t.integer "awaiting_procedure"
+    t.integer "technologist"
+    t.integer "explanation"
+    t.integer "patient_privcacy"
+    t.integer "cleanliness"
+    t.integer "overall_experience"
+    t.text    "hear_about"
   end
 
   create_table "users", force: true do |t|

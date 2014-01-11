@@ -1,0 +1,27 @@
+ <div class="row">
+    <div class="small-8 columns">
+        <div class="small-5 small-offset-1 column">
+          <%= simple_form_for lead, url: leads_path do |f| %>
+            <%= f.input :fname, label: false, placeholder: "first name" %>
+            <%= f.input :address, label: false, placeholder:"address" %>
+            <%= f.input :state, label: false, placeholder:"state" %>
+            <%= f.input :home_phone, as: :string, label: false, placeholder:"home phone" %>
+            <%= f.input :email, label: false, placeholder:"email" %>
+            <%= f.input :status, label: false, placeholder:"status" %>
+            <%= f.input :ordering_physician, label: false, placeholder:"ordering_physician" %>
+        </div>
+
+        <div class="small-5 columns">
+          <%= f.input :lname, label: false, placeholder: "last name" %>
+          <%= f.input :city, label: false, placeholder: "city" %>
+          <%= f.input :zip, as: :string, as: :string, label: false, placeholder:"zip" %>
+          <%= f.input :cell_phone, as: :string, label: false, placeholder:"cell phone" %>
+          <%= f.input :time_to_call, label: false, placeholder:"time_to_call" %>
+          <%= f.input :exam, label: false, placeholder:"exam" %>
+          <%= f.input :comments, as: :string, label: false, placeholder:"comments" %>
+        </div>
+
+      <%= f.submit "Submit" %>
+      <% end %> 
+    </div>
+</div>

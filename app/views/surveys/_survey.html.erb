@@ -1,22 +1,27 @@
  <div class="row">
     <div class="small-8 columns">
         <div class="small-5 columns">
-          <%= simple_form_for survey, url: survey_path do |f| %>
+          <%= simple_form_for survey, url: surveys_path do |f| %>
           <%= label :recommend, " Based on your experience, would you recommend Community Imaging to a friend or family member?" %>
         </div>
 
   <div class='row'>
     <div class="large-12 columns div-border">
-      <div class="large-5 columns">
+      
+      <div class="large-12 columns">
+        <p>Please rate your experience of the following:</p>
+      </div>
+
+      <div class="large-12 columns">
         <%= label :scheduling, "Scheduling?" %>
       </div>
 
-      <div class="large-3 columns div-border">
-        <%= f.radio_button :scheduling, true, :value => true %>
+      <div class="large-12 columns div-border">
+        <%= f.collection_radio_buttons :scheduling, Survey::SURVEY_OPTIONS, :first, :last %>
       </div>
 
       <div class="large-3 columns div-border">
-        <%= f.radio_button :scheduling, false, :value => false %>
+        <% %>
       </div>
     </div>
   </div>
