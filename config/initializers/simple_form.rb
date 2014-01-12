@@ -1,2 +1,0 @@
-## Inputs
-f.use :input

@@ -5,10 +5,10 @@ class SurveysController < ApplicationController
   end
 
   def create
-    pry
     @survey = Survey.new(survey_params)
     if @survey.save
       flash[:notice] = "Your inquiry was successfully submitted"
+      SurveyMailer.survey_email(@survey).deliver
       redirect_to root_url
     else
       flash[:error] = "Please correct the errors"

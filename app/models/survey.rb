@@ -1,12 +1,12 @@
 class Survey < ActiveRecord::Base
   
   SURVEY_OPTIONS=[
-                      [1, 'Poor'],
-                      [2, 'Fair'],
-                      [3, 'Good'],
-                      [4, 'Very Good'],
-                      [5, 'Excellent'],
-                    ]
+                    [1, 'Poor'],
+                    [2, 'Fair'],
+                    [3, 'Good'],
+                    [4, 'Very Good'],
+                    [5, 'Excellent'],
+                  ]
 
   validates :scheduling, inclusion: {in: SURVEY_OPTIONS.map(&:first)}
   validates :receptionist_greeting, inclusion: {in: SURVEY_OPTIONS.map(&:first)}
@@ -18,7 +18,6 @@ class Survey < ActiveRecord::Base
   validates :cleanliness, inclusion: {in: SURVEY_OPTIONS.map(&:first)}
   validates :overall_experience, inclusion: {in: SURVEY_OPTIONS.map(&:first)}
   #validates :hear_about, inclusion: {in: SURVEY_OPTIONS.map(&:first)}
-
 
   # return the appropriate survey option text
   def display_field(field)
