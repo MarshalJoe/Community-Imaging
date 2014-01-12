@@ -1,0 +1,36 @@
+
+<% content_for :nav do %>
+    <%= render "screenings/nav" %>
+<% end %> 
+
+<%content_for :title do %>
+  Admin page
+<% end %>
+
+<% content_for :row1 do %>
+  <h1>Welcome to the admin panel</h1>
+
+Survey Count: <%= @surveys.count %>
+Leads count: <%= @leads.count %>
+Registration Count <%= @registrations.count %>
+
+<br />
+<% @column_names.each do |cn| %>
+  <% i = 0 %>
+  <% while i < 6 %>
+    <%= survey_count(cn, i) %>
+    <% i += 1 %>
+    <br />
+  <% end %>
+<% end %>
+For question 1, the # of times someone chose poor: <%= survey_count("scheduling", 1) %>
+<br />
+
+<% end %>
+
+<% content_for :footer do %>
+    <%= render "screenings/footer" %>
+<% end %>
+
+
+

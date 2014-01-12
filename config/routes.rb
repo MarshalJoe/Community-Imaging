@@ -7,6 +7,10 @@ Center::Application.routes.draw do
  get '/contact/', to: 'screenings#contact', as: 'contact'
  get '/patients/', to: 'screenings#new', as: 'patients'
 
+ namespace :admin do 
+  root to: "dashboard#index"
+ end
+
  resources :surveys
  resources :leads
  resources :screenings, except: :new
