@@ -15,6 +15,7 @@ def index
     @registration = Registration.new(registration_params)
 
     if @registration.save
+      ScreeningMailer.screening_email(@registration).deliver
       redirect_to root_url,  :notice => "Your post was saved"
     else
       render "new"

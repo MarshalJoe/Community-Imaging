@@ -9,6 +9,7 @@ class LeadsController < ApplicationController
     @lead = Lead.create(lead_params)
     if @lead.save
       flash[:notice] = "Your inquiry was successfully submitted"
+      ScheduleExamMailer.schedule_exam_email(@lead).deliver
       redirect_to root_url
     else
       flash[:error] = "Please correct the errors"
