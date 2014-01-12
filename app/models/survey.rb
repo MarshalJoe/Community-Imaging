@@ -17,7 +17,7 @@ class Survey < ActiveRecord::Base
   validates :patient_privcacy, inclusion: {in: SURVEY_OPTIONS.map(&:first)}
   validates :cleanliness, inclusion: {in: SURVEY_OPTIONS.map(&:first)}
   validates :overall_experience, inclusion: {in: SURVEY_OPTIONS.map(&:first)}
-  validates :hear_about, inclusion: {in: SURVEY_OPTIONS.map(&:first)}
+  #validates :hear_about, inclusion: {in: SURVEY_OPTIONS.map(&:first)}
 
 
   # return the appropriate survey option text

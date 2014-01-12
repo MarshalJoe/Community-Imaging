@@ -15,7 +15,9 @@
     <title><%= yield :title %></title>
   </head>
 
+
   <body>
+
     <div class="row">
 
       <div class="row content-background">
@@ -25,7 +27,9 @@
             <%= image_tag "CommImagingLogo.png" %>
           </div>
         </div>
-        
+<hr>
+<%= flash.inspect %>
+</hr>        
         <!--nav!-->
         <div class="row">
             <%= yield :nav %>
