@@ -9,6 +9,8 @@ Center::Application.routes.draw do
  get '/mission/', to: 'screenings#mission', as: 'mission'
  get '/people/', to: 'screenings#people', as: 'people'
  get '/directions/', to: 'screenings#directions', as: 'directions'
+ get '/insurance/', to: 'screenings#insurance', as: 'insurance'
+ get '/additionalresources/', to: 'screenings#addresources', as: 'additionalresources'
 
 
 

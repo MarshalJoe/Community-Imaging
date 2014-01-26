@@ -8,14 +8,29 @@
       </li>
 
       <li data-dropdown="drop1">
-        About
+        <li><%= link_to 'About', about_path %></li>
       </li>
-
       <ul id="drop1" class="f-dropdown" data-dropdown-content>
         <li><%= link_to 'Mission', mission_path %></li>
         <li><%= link_to 'People', people_path %></li>
         <li><%= link_to 'Directions', directions_path %></li>
-      </ul>   
+      </ul>
+
+      <li>
+        <%= link_to 'Services', services_path %>
+      </li> 
+
+      <li>
+        <%= link_to 'Patients', patients_path %>
+      </li> 
+
+      <li>
+        <%= link_to 'Insurance Providers', insurance_path %>
+      </li> 
+
+      <li>
+        <%= link_to 'Contact', contact_path %>
+      </li>   
 
 
       

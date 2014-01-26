@@ -9,19 +9,21 @@
       
       <div class="large-8 columns div-border ">
         <ul class="inline-list right ">
-          <li><a href="#">Referring Physicians</a></li>
+          
+          <li><a href="https://pacs.commimaging.com/index.jsp">Referring Physicians</a></li>
+          
           <li><a href="#">Directions</a></li>
-          <li><a href="#">Additional Resources</a></li>
-        <% if user_signed_in? %>
-        <li>
-        <%= link_to('Admin Logout', destroy_user_session_path, :method => :delete) %>        
-        </li>
-        <% else %>
-        <li>
-        <%= link_to('Admin Login', new_user_session_path)  %>  
-        </li>
-        <% end %>
-        </ul>
+          
+          <% if user_signed_in? %>
+          <li>
+          <%= link_to('Admin Logout', destroy_user_session_path, :method => :delete) %>        
+          </li>
+          <% else %>
+          <li>
+          <%= link_to('Admin Login', new_user_session_path)  %>  
+          </li>
+          <% end %>
+          </ul>
       </div>
 
     <div class="row">
