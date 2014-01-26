@@ -6,6 +6,11 @@ Center::Application.routes.draw do
  get '/about/', to: 'screenings#about', as: 'about'
  get '/contact/', to: 'screenings#contact', as: 'contact'
  get '/patients/', to: 'screenings#new', as: 'patients'
+ get '/mission/', to: 'screenings#mission', as: 'mission'
+ get '/people/', to: 'screenings#people', as: 'people'
+ get '/directions/', to: 'screenings#directions', as: 'directions'
+
+
 
  namespace :admin do 
   root to: "dashboard#index"
