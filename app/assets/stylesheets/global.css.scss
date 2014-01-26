@@ -157,6 +157,20 @@ li{
 	float:left;
 }
 
+.nav-spacing{
+  margin-top:0px;
+  margin-left:0px;
+
+    @include breakpoint(med-screen){
+      margin-top:40px;
+  }
+
+  @include breakpoint(large-screen){
+      margin-top:40px;
+  }
+
+}
+
 ///////////////////////////////////////////////////////////////
 //                                                           //
 //                                                           //
