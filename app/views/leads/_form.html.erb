@@ -19,16 +19,10 @@
     </div>
   </div>
 
-
-
-
-
-
   <div class="row">
     <div class="small-12 columns">
-        
+        <%= simple_form_for lead, url: leads_path do |f| %>
         <div class="small-5 columns">
-          <%= simple_form_for lead, url: leads_path do |f| %>
             <%= f.input :fname, label: false, placeholder: "first name" %>
         </div>
 
