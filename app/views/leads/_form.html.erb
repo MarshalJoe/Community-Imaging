@@ -1,27 +1,66 @@
  <div class="row">
-    <div class="small-8 columns">
-        <div class="small-5 small-offset-1 column">
+    <div class="small-12 columns">
+        <div class="small-5 column">
           <%= simple_form_for lead, url: leads_path do |f| %>
             <%= f.input :fname, label: false, placeholder: "first name" %>
-            <%= f.input :address, label: false, placeholder:"address" %>
-            <%= f.input :state, label: false, placeholder:"state" %>
-            <%= f.input :home_phone, as: :string, label: false, placeholder:"home phone" %>
-            <%= f.input :email, label: false, placeholder:"email" %>
-            <%= f.input :status, label: false, placeholder:"status" %>
-            <%= f.input :ordering_physician, label: false, placeholder:"ordering_physician" %>
         </div>
 
-        <div class="small-5 columns">
+        <div class="small-7 columns">
           <%= f.input :lname, label: false, placeholder: "last name" %>
-          <%= f.input :city, label: false, placeholder: "city" %>
-          <%= f.input :zip, as: :string, as: :string, label: false, placeholder:"zip" %>
-          <%= f.input :cell_phone, as: :string, label: false, placeholder:"cell phone" %>
-          <%= f.input :time_to_call, label: false, placeholder:"time_to_call" %>
-          <%= f.input :exam, label: false, placeholder:"exam" %>
-          <%= f.input :comments, as: :string, label: false, placeholder:"comments" %>
         </div>
 
-      <%= f.submit "Submit" %>
+        <div class="small-12 columns">
+         <%= f.input :address, label: false, placeholder:"address" %>
+        </div>
+
+        <div class="small-4 columns">
+         <%= f.input :city, label: false, placeholder: "city" %>
+        </div>
+
+        <div class="small-4 columns">
+         <%= f.input :state, label: false, placeholder:"state" %>
+        </div>
+
+        <div class="small-4 columns">
+         <%= f.input :zip, as: :string, as: :string, label: false, placeholder:"zip" %>
+        </div>
+
+        <div class="small-6 columns">
+          <%= f.input :home_phone, as: :string, label: false, placeholder:"home phone" %>        
+        </div>
+
+        <div class="small-6 columns">
+          <%= f.input :cell_phone, as: :string, label: false, placeholder:"cell phone" %>      
+        </div>
+
+        <div class="small-12 columns">
+         <%= f.input :email, label: false, placeholder:"email" %>
+        </div>
+
+        <div class="small-6 columns">
+         <%= f.input :status, label: false, placeholder:"patient status (new or returning)" %>
+        </div>
+
+        <div class="small-6 columns">
+         <%= f.input :ordering_physician, label: false, placeholder:"ordering physician" %>
+        </div>
+
+        <div class="small-6 columns">
+         <%= f.input :exam, label: false, placeholder:"exam" %>
+        </div>      
+  
+        <div class="small-6 columns">
+         <%= f.input :time_to_call, label: false, placeholder:"best time to call" %>
+        </div>
+
+        <div class="small-12 columns">
+         <%= f.input :comments, as: :string, label: false, placeholder:"comments" %>
+        </div>
+
+        <div class="small-12-center columns">
+        <%= f.submit "Submit" %>
+        </div>
+      
       <% end %> 
     </div>
 </div>
