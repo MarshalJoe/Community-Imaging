@@ -1,31 +1,40 @@
+ 
+
+<div class='row'>
+  <div class='small-12 large-offset-1'>
+
+
+
+ <div class='row'>
+    <div class="small-5 columns">
+        <p> Please rate your experience of the following at Community Imaging: </p>
+    </div>
+ </div>
+
+<%= simple_form_for survey, url: surveys_path do |f| %>
+
  <div class="row">
     <div class="small-12 columns">
-       
-   <%= simple_form_for survey, url: surveys_path do |f| %>
-       
-  <div class='row'>
-    <div class="large-12 columns">
-      
-      <div class="large-12 columns">
-        <p>Please rate your experience of the following:</p>
-      </div>
+          
+      <div class='row'>
+        <div class="large-12 columns">
 
-      <div class="large-12 columns">
-        <%= label :scheduling, "Scheduling?" %>
-      </div>
+        <div class="large-12 columns strong">
+          <%= label :scheduling, "Scheduling:"%>
+        </div>
 
-      <div class="large-12 columns">
-        <%= f.collection_radio_buttons :scheduling, Survey::SURVEY_OPTIONS, :first, :last %>
-      </div>
+        <div class="large-12 columns">
+          <%= f.collection_radio_buttons :scheduling, Survey::SURVEY_OPTIONS, :first, :last %>
+        </div>
 
-    </div>
-  </div>
+        </div>
+      </div>
 
 
   <div class='row'>
     <div class="large-12 columns">
   
-      <div class="large-12 columns">
+      <div class="large-12 columns strong">
         <%= label :receptionist_greeting, "Receptionist's greeting and promptness:" %>
       </div>
 
@@ -39,7 +48,7 @@
   <div class='row'>
     <div class="large-12 columns">
   
-      <div class="large-12 columns">
+      <div class="large-12 columns strong">
         <%= label :completing_forms, "Ease of completing forms:" %>
       </div>
 
@@ -105,12 +114,15 @@
     <div class="large-12 columns">
   
       <div class="large-12 columns">
-        <%= label :cleanliness, "Cleanliness of Facility:" %>
+        <div class='strong'>
+          <%= label :cleanliness, "Cleanliness of Facility:" %>
+        </div>
       </div>
 
       <div class="large-12 columns">
         <%= f.collection_radio_buttons :cleanliness, Survey::SURVEY_OPTIONS, :first, :last %>
       </div>
+
     </div>
   </div>
 
@@ -124,11 +136,12 @@
       <div class="large-12 columns">
         <%= f.collection_radio_buttons :overall_experience, Survey::SURVEY_OPTIONS, :first, :last %>
       </div>
+
     </div>
   </div>
 
 
-    <div class='row'>
+  <div class='row'>
     <div class="large-12 columns">
   
       <div class="large-12 columns">
@@ -138,10 +151,11 @@
       <div class="large-12 columns">
         <%= f.collection_radio_buttons :hear_about, Survey::SURVEY_OPTIONS, :first, :last %>
       </div>
+
     </div>
   </div>
 
-    <div class='row'>
+<!--   <div class='row'>
     <div class="large-12 columns">
   
       <div class="large-12 columns">
@@ -150,13 +164,22 @@
 
       <div class="large-12 columns">
         <%= f.collection_radio_buttons :recommend, Survey::SURVEY_OPTIONS, :first, :last %>
-      </div>git add
-    </div>
-  </div>
+      </div>
 
-      <%= f.submit "Submit" %>
-      <% end %> 
     </div>
+  </div> -->
+
+      <div class='row'>
+        <div class='small-12 large-offset-2'>
+          <%= f.submit "Submit" %>
+          <% end %> 
+        </div>
+      </div>
+    
+    </div>
+</div>
+
+  </div>
 </div>
 
 
