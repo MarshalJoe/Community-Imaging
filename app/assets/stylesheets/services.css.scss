@@ -1,0 +1,45 @@
+p.answer{
+  margin:15px 0 0 0;
+  text-indent: 1.5em;
+  text-align: justify;
+}
+
+#fAQ{
+  margin-top: 30px;
+}
+
+#fAQ dt{
+  font-size: 17px;
+  line-height: 1.5em;
+}
+
+#fAQ dt a{
+  text-decoration: none;
+  color:#003366;
+  font-weight:300;
+}
+
+#fAQ dt a:hover{
+  cursor:pointer;
+  text-decoration: none;
+  font-weight:400;
+}
+
+
+#fAQ dd{
+  margin-top: 20px;
+  font-size: 16px;
+  display:none;
+  line-height: 1.5em;
+  background-color: #E8E8E8;
+  padding: 0px 15px 15px 15px;
+  text-align: justify;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgrey;
+  border-radius: 10px 10px;
+}
+
+a.addResource{
+  font-size: 16px;
+}
