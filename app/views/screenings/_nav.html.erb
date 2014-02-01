@@ -19,9 +19,9 @@
       <div class="small-2 columns">
         <a href="#" data-dropdown="drop3">Services</a>
         <ul id="drop3" class="f-dropdown" data-dropdown-content>
-          <li><%= link_to 'Arthrography', services_path %></li>
-          <li><%= link_to 'MRI', services_path %></li>
-          <li><%= link_to 'X-Ray', services_path %></li>
+          <li><%= link_to "Arthrography", services_path(anchor: "tabs-1") %></li>
+          <li><%= link_to "MRI", services_path(anchor: "tabs-2") %></li>
+          <li><%= link_to 'X-Ray', services_path(anchor:"tabs-3") %></li>
         </ul>
       </div>
 
