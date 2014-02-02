@@ -9,12 +9,29 @@
 
 
 <% content_for :row1 do %>
+  <div class="small-10 small-offset-1 columns"> 
+    <div id="tabs" style="display: none;">
 
-	<div class="small-10 small-offset-1 columns">	
-	  	<div id="tabs-2">
-    		<%= render "people" %>
-	  	</div>
-	</div>
+  <ul>
+    <li><a href="#mission">Mission</a></li>
+    <li><a href="#people">People</a></li>
+    <li><a href="#directions">Directions</a></li>
+  </ul>
+
+  <div id="mission">
+    <%=render "mission" %>
+  </div>
+
+  <div id="people">
+    <%=render "people" %>
+  </div>
+
+  <div id="directions">
+    <%=render "directions" %>
+  </div>
+
+  </div>
+ </div> 
 <% end %>
 
 <% content_for :footer do %>
