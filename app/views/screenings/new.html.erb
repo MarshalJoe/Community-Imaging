@@ -7,24 +7,24 @@
 <% end %>
 
 <% content_for :row1 do %>
-  <div class="small-10 small-offset-1 columns div-border">  
+  <div class="small-10 small-offset-1 columns">  
     <div id="tabs" style="display: none;">
       
       <ul>
-        <li><a href="#tabs-1">Schedule Exam</a></li>
-        <li><a href="#tabs-2">Registration & Screening</a></li>
-        <li><a href="#tabs-3">Post Visit Survey</a></li>
+        <li><a href="#schedexam">Schedule Exam</a></li>
+        <li><a href="#regscreening">Registration & Screening</a></li>
+        <li><a href="#survey">Post Visit Survey</a></li>
       </ul>
 
-        <div id="tabs-1">
+        <div id="schedexam">
           <%=render "schedexam" %>
-        </div><!-- end tabs-1 -->
+        </div>
 
-        <div id="tabs-3">
+        <div id="survey">
           <%=render "survey" %>
         </div>
         
-        <div id="tabs-2">
+        <div id="regscreening">
           <%=render "regscreening" %>
         </div>
     </div>
