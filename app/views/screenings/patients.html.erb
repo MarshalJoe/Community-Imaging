@@ -11,25 +11,24 @@
 		<div id="tabs" style="display: none;">
 			
 			<ul>
-				<li><a href="#tabs-1">Registration & Screening</a></li>
-				<li><a href="#tabs-2">Schedule Exam</a></li>
-				<li><a href="#tabs-3">Post Visit Survey</a></li>
+				<li><a href="#regscreening"> Registration & Screening </a></li>
+				<li><a href="#schedexam"> Schedule Exam </a></li>
+				<li><a href="#survey"> Post Visit Survey </a></li>
 			</ul>
 
-		  	<div id="tabs-1">
-	    		<%=render "regscreening" %>
-		  	</div><!-- end tabs-1 -->
+	  	<div id="regscreening">
+    		<%=render "regscreening" %>
+	  	</div>
 
-		  	<div id="tabs-2">
-	    		<%=render "survey" %>
-		  	</div>
-				
-		  	<div id="tabs-3">
-	    		<%=render "schedexam" %>
-		  	</div>
+	  	<div id="survey">
+    		<%=render "survey" %>
+	  	</div>
+			
+	  	<div id="schedexam">
+    		<%=render "schedexam" %>
+	  	</div>
 		  	  
 		</div>
-
 	</div>
 <% end %>
 
