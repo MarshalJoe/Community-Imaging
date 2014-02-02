@@ -138,11 +138,30 @@ body{
   font-weight: bold !important;
 }
 
-
 .right{
   float:right;
 }
 
+/* stylying for the box around the reg-screening survey */
+.s-group{
+  display:inline;
+  -webkit-border-radius: 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px;
+  border-radius: 10px 10px 10px;
+  padding:1px 595px 271px 200px;
+  background-color: #E8E8E8;  
+}
+
+/* stylying for the box around the reg-screening survey */
+.s-group-1{
+  margin-top: 500px;
+  display:inline;
+  -webkit-border-radius: 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px;
+  border-radius: 15px 10px 10px;
+  padding:125px 595px 40px 200px;
+  background-color: #E8E8E8;  
+}
 
 
 ///////////////////////////////////////////////////////////////

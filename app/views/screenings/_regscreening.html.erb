@@ -1,16 +1,23 @@
- <div class="row">
+  
+<div class="s-group"></div>
+
+
+  <div class="row">
     <div class="small-12 columns">
-      <%= simple_form_for @registration, url: screenings_path do |f| %>
-        <div class="small-5 columns">
+        <%= simple_form_for @registration, url: screenings_path do |f| %>
+        
+        <div class="small-5 columns" style="padding-top:2px;">
           <%= f.input :fname, label: false, placeholder: "first name" %>
         </div>
 
-        <div class="small-7 columns">
+        <div class="small-7 columns" style="padding-top:2px;">
           <%= f.input :lname, label: false, placeholder: "last name" %>
         </div>
 
     </div>
   </div>
+
+
 
   <div class="row">
     <div class="small-12 columns">
@@ -40,7 +47,7 @@
     </div>
   </div>
 
-    <div class="row">
+  <div class="row">
     <div class="small-12 columns">
 
         <div class="small-6 columns">
@@ -65,25 +72,26 @@
         <div class="small-6 columns">
           <%= f.input :weight, label: false, placeholder:"weight" %>
         </div>
-
     </div>
-  </div>
+</div>
+
 
   <div class="row">
+
     <div class="small-12 columns">
-      
-        <div class="small-6 columns">
+        
+        <div class="small-6 columns" style="padding-top:57px;">
             <%= f.input :referring_physician, label: false, placeholder:"referring physician" %>
         </div>
 
-        <div class="small-6 columns">
+        <div class="small-6 columns" style="padding-top:57px;">
           <%= f.input :procedure_type, label: false, placeholder:"procedure type" %>
         </div>
 
     </div>
   </div>
 
-    <div class="row">
+  <div class="row">
     <div class="small-12 columns">
       
         <div class="small-6 columns">
@@ -97,19 +105,25 @@
     </div>
   </div>
 
+  
+
+<div class="s-group-1"></div>
+
   <div class="row">
     <div class="small-12 columns">
       
-        <div class="small-6 columns">
+        <div class="small-6 columns" style="margin-top:-17px;">
             <%= f.input :group_number, label: false, placeholder:"group number" %>
         </div>
 
-        <div class="small-6 columns">
+        <div class="small-6 columns" style="margin-top:-17px;">
           <%= f.input :insurance_phone, label: false, placeholder:"insurance phone" %>
         </div>
 
     </div>
   </div>
+
+
 
 <hr>
 
