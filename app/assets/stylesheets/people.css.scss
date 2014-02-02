@@ -1,0 +1,66 @@
+/*.border-blue {
+  border-color: blue;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.border-orange {
+  border-color: orange;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.border-green {
+  border-color: green;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.border-purple {
+  border-color: purple;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.border-red {
+  border-color: red;
+  border-width: 2px;
+  border-style: solid;
+}*/
+
+* {
+  box-sizing: border-box;
+}
+
+.label-lw {
+  width: auto;
+  border-width: 0 0 2px 0;
+  border-color: black;
+  border-style: solid;
+  margin: 40px 0 40px 0;
+}
+
+.portrait img{
+  overflow: hidden;
+  border-radius: 10px 10px;
+}
+
+.bio {
+  font-size: 13px;
+}
+
+.name {
+  font-size: 16px;
+}
+
+.person {
+  padding: 5px;
+  border-color: #eee;
+  border-width: 1px;
+  border-style: solid;
+  margin: 5px !important;
+}
+
+.position {
+  font-style: italic;
+}
