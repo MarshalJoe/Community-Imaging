@@ -11,6 +11,7 @@
 $bgcolor:#003366;
 $secondary:#214768;
 $tertiary:#234e73;
+$pcolor: darken(blue, 35%);
 
 //media query sizes
 $large-size:1000px;
@@ -68,6 +69,10 @@ $medium-size:720px;
 
 body{
 	background-color:$bgcolor; 
+}
+
+p {
+  color:$pcolor;
 }
 
 .mission-box{
