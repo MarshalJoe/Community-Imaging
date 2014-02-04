@@ -84,13 +84,13 @@ body{
 	border-color:$bgcolor;
 	border-width:2px;	
 
-	@include breakpoint(med-screen){	
+	@include breakpoint(med-screen) {	
 		min-height:500px;
 		min-width:200px;
 		border-width:2px;
 	}
 	
-	@include breakpoint(large-screen){	
+	@include breakpoint(large-screen) {	
 		min-height:600px;
 		min-width:200px;	
 		border-width:0px;	
@@ -120,14 +120,14 @@ body{
 	margin-top:0px;
 	margin-left:0px;
 
-	@include breakpoint(med-screen){
+	@include breakpoint(med-screen) {
 			margin-top:0px;
 			margin-left:35px;
 			height:50px;
 			width:50px;
 	}
 
-	@include breakpoint(large-screen){
+	@include breakpoint(large-screen) {
 			margin-top:5px;
 			margin-left:17px;
 	}
@@ -177,11 +177,11 @@ body{
   margin-top:0px;
   margin-left:0px;
 
-    @include breakpoint(med-screen){
+    @include breakpoint(med-screen) {
       margin-top:40px;
   }
 
-  @include breakpoint(large-screen){
+  @include breakpoint(large-screen) {
       margin-top:40px;
   }
 
