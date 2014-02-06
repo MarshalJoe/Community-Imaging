@@ -48,17 +48,26 @@ a.addResource{
   margin-left: 5%;
 }
 
+$lightgray: lighten(gray, 35%);
+
 .uninsured {
   background-color: #E8E8E8;
   color: darken(blue, 35%);
   height: 210px;
-  width: 250px;
+  width: 30%;
+  min-width: 200px;
   float:right;
   position: absolute;
   top: 10%;
-  right: 20%;
+  right: 15%;
   padding: 15px;
   text-align: justify;
+  border-radius: 10px;
+  border: 2px solid $lightgray;
+
+    p {
+
+    }
 }
 
 
