@@ -43,3 +43,21 @@ p.answer{
 a.addResource{
   font-size: 16px;
 }
+
+.faq, .uninsured {
+
+}
+
+.uninsured {
+  background-color: #E8E8E8;
+  color: darken(blue, 35%);
+  height: 225px;
+  width: 200px;
+  float:right;
+  position: absolute;
+  top: 30%;
+  right: 20%;
+  padding: 10px;
+}
+
+
